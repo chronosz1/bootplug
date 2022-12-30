@@ -1,0 +1,85 @@
+To set up the Nuclei tool in Linux, you can follow these steps:
+
+1.    Install the required dependencies:
+
+
+```
+# install Go
+apt update && apt install golang-go -y
+
+# install Node.js and npm
+apt update && apt install nodejs npm -y
+
+```
+
+2.    Set up the GoLang environment:
+
+
+
+```
+# set the GOPATH environment variable
+echo 'export GOPATH=$HOME/go' >> ~/.bashrc
+
+# source the .bashrc file to apply the changes
+source ~/.bashrc
+
+# create the GOPATH directory
+mkdir -p $GOPATH
+
+```
+
+3.    Install Nuclei:
+
+
+```
+# download the latest version of Nuclei
+wget https://github.com/projectdiscovery/nuclei/releases/download/v2.10.1/nuclei-linux-amd64.tar.gz
+
+# extract the Nuclei binary
+tar -xzf nuclei-linux-amd64.tar.gz
+
+# move the Nuclei binary to the GOPATH/bin directory
+mv nuclei $GOPATH/bin
+
+# add Nuclei to the PATH environment variable
+echo 'export PATH=$PATH:$GOPATH/bin' >> ~/.bashrc
+
+# source the .bashrc file to apply the changes
+source ~/.bashrc
+
+
+```
+
+4.     Install the Nuclei templates:
+
+
+```
+# clone the Nuclei templates repository
+git clone https://github.com/projectdiscovery/nuclei-templates.git
+
+# install the required dependencies
+cd nuclei-templates && npm install
+
+```
+
+Now you should be able to use the Nuclei tool by running the nuclei command.
+
+I hope this helps! Let me know if you have any questions or need further assistance.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
