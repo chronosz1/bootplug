@@ -4,7 +4,7 @@
 wget https://go.dev/dl/go1.19.4.linux-amd64.tar.gz
 
 # extract the Go binary
-tar -C /usr/local -xzf go$(wget -qO- https://golang.org/VERSION?m=text).linux-amd64.tar.gz
+tar -C /usr/local -xzf go1.19.4.linux-amd64.tar.gz
 
 # add Go to the PATH environment variable
 echo 'export PATH=$PATH:/usr/local/go/bin' >> ~/.bashrc
